@@ -320,6 +320,8 @@ def prototype_encdec_english_state():
     state['word_indx'] = DATA_DIR + "vocab.in.pkl"
     state['word_indx_trgt'] = DATA_DIR + "vocab.out.pkl"
     state['prefix'] = 'subscene_english_'
+    
+    return state
 
 def prototype_encdec_vietnamese_state():
     state = prototype_encdec_subscene_state()
@@ -332,3 +334,5 @@ def prototype_encdec_vietnamese_state():
     state['word_indx'] = DATA_DIR + "vocab.in.pkl"
     state['word_indx_trgt'] = DATA_DIR + "vocab.out.pkl"
     state['prefix'] = 'subscene_vietnamese_'
+
+    return state
