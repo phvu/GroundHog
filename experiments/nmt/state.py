@@ -313,8 +313,8 @@ def prototype_encdec_english_state():
     state = prototype_encdec_subscene_state()
 
     DATA_DIR = '/home/vupham/data/subscene/english/'
-    state['target'] = [DATA_DIR + "binarized_text.shuf.out.h5"]
-    state['source'] = [DATA_DIR + "binarized_text.shuf.in.h5"]
+    state['target'] = [DATA_DIR + "binarized_text.out.shuf.h5"]
+    state['source'] = [DATA_DIR + "binarized_text.in.shuf.h5"]
     state['indx_word'] = DATA_DIR + "ivocab.in.pkl"
     state['indx_word_target'] = DATA_DIR + "ivocab.out.pkl"
     state['word_indx'] = DATA_DIR + "vocab.in.pkl"
@@ -327,8 +327,8 @@ def prototype_encdec_vietnamese_state():
     state = prototype_encdec_subscene_state()
 
     DATA_DIR = '/home/vupham/data/subscene/vietnamese/'
-    state['target'] = [DATA_DIR + "binarized_text.shuf.out.h5"]
-    state['source'] = [DATA_DIR + "binarized_text.shuf.in.h5"]
+    state['target'] = [DATA_DIR + "binarized_text.out.shuf.h5"]
+    state['source'] = [DATA_DIR + "binarized_text.in.shuf.h5"]
     state['indx_word'] = DATA_DIR + "ivocab.in.pkl"
     state['indx_word_target'] = DATA_DIR + "ivocab.out.pkl"
     state['word_indx'] = DATA_DIR + "vocab.in.pkl"
