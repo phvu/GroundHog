@@ -292,3 +292,43 @@ def prototype_phrase_lstm_state():
     state['prefix'] = 'phrase_lstm_'
 
     return state
+
+def prototype_encdec_subscene_state():
+    state = prototype_state()
+
+    state['null_sym_source'] = 100000
+    state['null_sym_target'] = 100000
+    state['n_sym_source'] = state['null_sym_source'] + 1
+    state['n_sym_target'] = state['null_sym_target'] + 1
+
+    state['seqlen'] = 30
+    state['bs']  = 50
+
+    state['dim'] = 1000
+    state['rank_n_approx'] = 620
+
+    return state
+
+def prototype_encdec_english_state():
+    state = prototype_encdec_subscene_state()
+
+    DATA_DIR = '/home/vupham/data/subscene/english/'
+    state['target'] = [DATA_DIR + "binarized_text.shuffled.out.h5"]
+    state['source'] = [DATA_DIR + "binarized_text.shuffled.in.h5"]
+    state['indx_word'] = DATA_DIR + "ivocab.in.pkl"
+    state['indx_word_target'] = DATA_DIR + "ivocab.out.pkl"
+    state['word_indx'] = DATA_DIR + "vocab.in.pkl"
+    state['word_indx_trgt'] = DATA_DIR + "vocab.out.pkl"
+    state['prefix'] = 'subscene_english_'
+
+def prototype_encdec_vietnamese_state():
+    state = prototype_encdec_subscene_state()
+
+    DATA_DIR = '/home/vupham/data/subscene/vietnamese/'
+    state['target'] = [DATA_DIR + "binarized_text.shuffled.out.h5"]
+    state['source'] = [DATA_DIR + "binarized_text.shuffled.in.h5"]
+    state['indx_word'] = DATA_DIR + "ivocab.in.pkl"
+    state['indx_word_target'] = DATA_DIR + "ivocab.out.pkl"
+    state['word_indx'] = DATA_DIR + "vocab.in.pkl"
+    state['word_indx_trgt'] = DATA_DIR + "vocab.out.pkl"
+    state['prefix'] = 'subscene_vietnamese_'
